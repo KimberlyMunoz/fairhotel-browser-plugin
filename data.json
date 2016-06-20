@@ -1,0 +1,12 @@
+[
+  {
+    "hotelName": "Hyatt Regency Sacramento",
+    "address" : "1209 L St",
+    "city": "Sacramento",
+    "state": "CA",
+    "zip": "95814",
+    "boycott": true,
+    "watchlist": false,
+    "union": false
+  }
+]

@@ -1,16 +1,27 @@
 {
   "manifest_version": 2,
 
-  "name": "fair hotels plugin",
+  "name": "Fair Hotels plugin",
   "description": "This extension shows fairhotels.org data on websites Concur so that travelers can make more informed choices when picking hotels",
   "version": "1.0",
 
-  "browser_action": {
+  "page_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "http://*.concursolutions.com/travelwizard/*",
+    "https://*.concursolutions.com/travelwizard/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.concursolutions.com/travelwizard/*",
+        "https://*.concursolutions.com/travelwizard/*"
+      ],
+      "js": ["content.js"]
+    }
   ]
 }
